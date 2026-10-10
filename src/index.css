@@ -1,0 +1,128 @@
+:root {
+  /* Exact Theme from the Wedding Invitation Card: Luxury Pearl White & Rich Charcoal/Black */
+  --bg-page: #f5f5f7;
+  --bg-card: #ffffff;
+  --bg-card-alt: #fafafc;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+
+  --text-primary: #121212;
+  --text-secondary: #383838;
+  --text-muted: #666666;
+  --text-light: #888888;
+  
+  --border-card: #e5e5ea;
+  --border-dark: #121212;
+  --border-subtle: #eaeaea;
+
+  --accent-gold: #c59b27;
+  --accent-silver: #a8a8a8;
+  --accent-rose: #e11d48;
+
+  --font-script: 'Great Vibes', cursive;
+  --font-royal: 'Cinzel', serif;
+  --font-decorative: 'Cinzel Decorative', serif;
+  --font-arabic: 'Amiri', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 45px rgba(0, 0, 0, 0.12);
+  --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.03) 0%, transparent 60%),
+    radial-gradient(circle at 10% 30%, rgba(0, 0, 0, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 90% 70%, rgba(0, 0, 0, 0.02) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #b0b0b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
+/* Text selections */
+::selection {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes swingLantern {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
